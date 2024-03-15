@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+       .loadinggif{
+                max-width: 500px;
+            }
+
+            .pre-loader{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                z-index: 100;
+            }
+
+            .pre-loader.hidden{
+                animation: fadeOut 2s;
+                animation-fill-mode: forwards;
+            }
+            @keyframes fadeOut{
+                100%{
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        
+
+    body {
+    padding-top: 56x; /* Adjusted for the fixed navbar height */
+    background-color:#ffffff;/* Black background color */
+    color: white#fff; /* White text color */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    }
+
+    nav {
+        box-shadow: 0 0 10px rgba(124, 126, 165, 0.911);
+        background: rgb(72, 64, 96);
+    }
+
+    .icons{
+        margin: 20px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        body {
+        padding-top:70px; /* Adjusted for the fixed navbar height in mobile view */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+  }
+
+  .light {
+    background-color: #ffb5bb;
+    color: #000000;
+  }
+
+  .dark {
+    background-color:  rgb(179, 168, 210);
+    color: #ffffff;
+  }
+
+    .dark-icon{
+      background: rgb(72, 64, 96);
+    }
+    
+    .dark-mode-toggle {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .dark-mode-toggle:hover {
+    color: #f8f9fa; /* slightly lighter shade on hover */
+  }
+
+  #back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(72, 64, 96);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.911);
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+        .carousel {
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+        }
+
+        .carousel-inner {
+        width: 100%;
+        }
+
+        .carousel-item img {
+        width: 100%;
+        height: 700px;
+        }
+
+        .category {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        }
+        .category:hover {
+        transform: scale(1.1);
+        }
+
+        .category img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+        .category a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        background: rgb(72, 64, 96);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+        .category:hover a {
+        opacity: 1;
+        }
+        .product-card {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        
+        }
+        .product-card img {
+        width: 100%;
+        height: auto;
+        }
+
+        .product-card .card-body {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        } 
+
+        .bg-custom{
+        background-color:  rgb(72, 64, 96);
+        border-radius: 20px;
+        color: white;
+        border-radius: 20px;
+        opacity: 0,5;
+        }
+
+        .bg-card{
+        border-radius: 20px;
+        border:  rgb(255, 255, 255) solid 8px;
+        padding: 20px;
+        }
+
+        .bg-cards{
+        border-radius: 20px;
+        border:  rgb(72, 64, 96) solid 8px;
+        padding: 20px;
+        }
+        .para{
+          color: rgb(72, 64, 96);
+        }
+
+        .card {
+        margin-bottom: 20px;
+        overflow: hidden;
+        border: 2px white;
+      }
+      .card img {
+        max-width: 150px;
+        height: 140px;
+      }
+
+        .footer {
+            background-color:rgb(72, 64, 96);/* Footer background color */
+            color: #ecf0f1; /* Footer text color */
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #ecf0f1; /* Footer link color */
+        }
+
+        .footer a:hover {
+            color: #ffffff; /* Footer link color on hover */
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }      
+
+        .btn{
+            background-color:rgb(72, 64, 96);
+            color: white;
+        }
+
+        .footer-social li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact-form {
+            margin-top: 20px;
+        }
+
+        .footer-custom{
+        background-color:rgb(72, 64, 96); /* Footer background color */
+        color: #ffffff; /* Footer text color */
+        padding: 30px 0;
+      }
+
+        ::-webkit-scrollbar{
+       width: 10px;
+      }
+
+
+      ::-webkit-scrollbar-thumb{
+      background-color:rgb(72, 64, 96);
+      width: 15px;
+      border-radius: 20px;
+      }
+        
+    </style>
+</head>
+<body>
+   
+  <div class="pre-loader">
+    <img src="logo image/lodder.gif" alt="loader" class="loadinggif">
+</div>
+
+
+  <header>
+    <div class="container-fluid w-100 clr">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <i class="fa-solid fa-h  fa-2xl" style="color: #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color: #ffffffe8; "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <img src="My Hair My Canvas img/hair (1).png" alt="">
+                <i class="fa-solid fa-c  fa-2xl" style="color:  #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-e  fa-2xl" style="color:  #ffffffe8; "></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Equipments.html">Equipments</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Category.html">Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Remedies.html">Remedies</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Sign up.html"><img src="My Hair My Canvas img/log-in.png" alt="Icon 1 "></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                      <li class="nav-item">
+                        <a  class="nav-link"href="page2.html"><img src="My Hair My Canvas img/shopping-cart (1).png" alt="Icon 2"></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                    </ul>
+                    <button id="darkModeToggle" class="dark-mode-toggle">
+                      <img src="logo image/night.png" class="dark-icon" alt="">
+                    </button>
+                </div>
+               
+            </div>
+        </nav>
+    </header>
+
+    <button id="back-to-top" onclick="scrollToTop()"><img src="logo image/up-arrow.png" alt=""></button>
+
+    <section>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ul>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="My Hair My Canvas img/images 5.jfif" alt="Slide 1">
+                <div class="carousel-caption">
+                <h3>All products are available feel free to buy </h3>
+                <p ></p>
+                </div>
+            </div>
+        
+            <div class="carousel-item">
+                <img src="My Hair My Canvas img/equipments banner.jpg" alt="Slide 2">
+                <div class="carousel-caption">
+                <h3 class="para">Hair Equipments That Help You To Style Your Hairs </h3>
+                <p class="para"> </p>
+                </div>
+            </div>
+        
+            <div class="carousel-item">
+                <img src="My Hair My Canvas img/treatment banner.jpg" alt="Slide 3">
+                <div class="carousel-caption">
+                <h3 class="para">Hair Treatment that help to solve your hair problems</h3>
+                <p class="para"></p>
+                </div>
+            </div>
+            </div>
+        
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+  <hr>
+    <section>
+        <div class="container">
+            <h2 class="mt-4 mb-3">Categories</h2>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="d-flex justify-content-between">
+                  <div class="category">
+                    <img src="logo image/alopecia.png" alt="Category 1">
+                    <a href="#"><h4>Hair loss</h4></a>
+                  </div>
+                  <div class="category">
+                    <img src="logo image/steamer.png" alt="Category 2">
+                    <a href="#"><h4>Steamer</h4></a>
+                  </div>
+                  <div class="category">
+                    <img src="logo image/hair-dryer.png" alt="Category 3">
+                    <a href="#"><h4>Dryer</h4></a>
+                  </div>
+                  <div class="category">
+                    <img src="logo image/cream.png" alt="Category 4">
+                    <a href="Cream.html"><h4>Cream</h4></a>
+                  </div>
+                  <div class="category">
+                    <img src="logo image/curling-iron.png" alt="Category 5">
+                    <a href="#"><h4>Irons</h4></a>
+                  </div>
+                  <div class="category">
+                    <img src="logo image/liquid-drop.png" alt="Category 6">
+                    <a href="Various oil.html"><h4>Hair Oils</h4></a>
+                  </div>
+                  <div class="category">
+                    <img src="logo image/shampoo.png" alt="Category 7">
+                    <a href="Shampoo.html"><h4>Shampoo</h4></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+  <hr>
+    <section class="py-5 bg-custom ">
+        <center><h2 class="mt-4 mb-3">Check Out These Products</h2></center>
+        <div class="container bg-card">
+            <div id="productCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="product-card">
+                        <a href="Shampoo.html">
+                        <img src="My Hair My Canvas img/Replenishing Moisture - Caviar Anti Aging Shampoo.jpg" class="card-img-top" alt="Product 1"></a>
+                        <div class="card-body">
+                          <h5 class="card-title">Replenishing Moisture - Caviar Anti Aging Shampoo</h5>
+                          <p class="card-text">Price : $8.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="product-card">
+                        <a href="spray.html">
+                        <img src="My Hair My Canvas img/Caviar Anti-Aging PROFESSIONAL STYLING Working.jpg" class="card-img-top" alt="Product 2"></a>
+                        <div class="card-body">
+                          <h5 class="card-title">Caviar Anti-Aging professional styling Working</h5>
+                          <p class="card-text">Price : $8.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="product-card">
+                        <a href="conditioner.html">
+                        <img src="My Hair My Canvas img/Caviar Anti-Aging Moisture Splash.jpg" class="card-img-top" alt="Product 3"></a>
+                        <div class="card-body">
+                          <h5 class="card-title">Caviar Anti-Aging Moisture <br> Splash</h5>
+                          <p class="card-text">Price : $8.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="product-card">
+                        <a href="">
+                        <img src="My Hair My Canvas img/Replenishing Moisture - Caviar Anti Aging Gelee.jpg" class="card-img-top" alt="Product 4"></a>
+                        <div class="card-body">
+                          <h5 class="card-title">Replenishing Moisture - Caviar Anti Aging Gelee </h5>
+                          <p class="card-text">Price : $8.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="product-card">
+                        <a href="">
+                        <img src="My Hair My Canvas img/Bond Repair - Caviar Anti Aging Hair Serum.jpg" class="card-img-top" alt="Product 5"></a>
+                        <div class="card-body">
+                          <h5 class="card-title">Bond Repair - Caviar Anti Aging Hair Serum</h5>
+                          <p class="card-text">Price : $8.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="product-card">
+                        <a href="Hair Mask.html">
+                        <img src="My Hair My Canvas img/Alterna Caviar Anti-Aging Bond Repair Masque.webp" class="card-img-top" alt="Product 6"></a>
+                        <div class="card-body">
+                          <h5 class="card-title">Alterna Caviar Anti-Aging Bond Repair Masque </h5>
+                          <p class="card-text">Price : $8.00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+    </section>
+  <hr>
+  <section class="py-5 ">
+    <center><h2 class="mt-4 mb-3">These Product Are Available</h2></center>
+    <div class="container bg-cards">
+        <div id="productCarousell" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="My Hair My Canvas img/dryer card.webp" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Product 1</h5>
+                      <p class="card-text">Description of Product 1.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="My Hair My Canvas img/hair straightner.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Product 2</h5>
+                      <p class="card-text">Description of Product 2.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="My Hair My Canvas img/massager card.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Product 3</h5>
+                      <p class="card-text">Description of Product 3.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="My Hair My Canvas img/steamer card.webp" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                      <h5 class="card-title">Product 4</h5>
+                      <p class="card-text">Description of Product 4.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="My Hair My Canvas img/spa cap card.webp" class="card-img-top" alt="Product 5">
+                    <div class="card-body">
+                      <h5 class="card-title">Product 5</h5>
+                      <p class="card-text">Description of Product 5.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="product-card">
+                    <img src="My Hair My Canvas img/spray bottle.webp" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                      <h5 class="card-title">Product 6</h5>
+                      <p class="card-text">Description of Product 6.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#productCarousell" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#productCarousell" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+  </section>
+
+    <section class=" py-5 bg-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="img-fluid rounded" src="logo image/hair loss.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-8 text-light">HAIR TREATMENTS AND SOLUTION</h2>
+                    <p class="lead text-light">These treatments may include medications such as minoxidil and finasteride, 
+                      which work to stimulate hair follicles and inhibit the production of dihydrotestosterone 
+                      (DHT), a hormone associated with hair loss. Additionally, procedures like platelet-rich 
+                      plasma (PRP) therapy and hair transplant surgery offer alternatives for those seeking 
+                      more advanced solutions. PRP therapy involves injecting concentrated platelets from the 
+                      patient's own blood into the scalp to stimulate hair growth, while hair transplant surgery 
+                      involves relocating healthy hair follicles to areas of thinning or balding. </p>
+                      <a href="Treatments.html" class="btn btn-light btn ">View More Information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="display-8">BEST HAIR EQUIPMENTS</h2>
+                    <p class="lead">Hair equipment products encompass a diverse array of tools and devices 
+                      designed to aid in styling, grooming, and caring for hair. This category includes 
+                      essentials like hair dryers, flat irons, curling wands, and hairbrushes, each serving 
+                      specific functions to achieve desired hairstyles. Hair dryers utilize airflow and heat 
+                      to dry damp hair efficiently, while flat irons and curling wands provide versatility in 
+                      straightening or curling hair with precision. Additionally, a variety of brushes, such 
+                      as paddle brushes, round brushes, and detangling brushes, cater to different hair types 
+                      and textures, facilitating smooth and manageable styling. Beyond styling tools, equipment 
+                      products also encompass accessories like hair clips, pins, and headbands, which aid in 
+                      creating intricate hairstyles or securing hair in place. </p>
+                      <a href="Equipments.html" class="btn btn-light btn ">View Equipments</a>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid rounded" src="logo image/equipments logo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="container bg-cards text-dark">
+        <div class="row">
+              <div class="col-md-4">
+                <div class="card ">
+                  <center>
+                  <a href=""><img src="logo image/free-delivery.svg" class="card-img-top" alt="Image 1"></a>
+                  <br>
+                  <br>
+                    <h5 class="card-title">Free Standard Shipping</h5>
+                    <p class="card-text">On orders over $40</p>
+                  </center>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <center>
+                  <a href=""><img src="logo image/rewards.png" class="card-img-top" alt="Image 2"></a>
+                  <br>
+                  <br>
+                    <h5 class="card-title">Rewards Program</h5>
+                    <p class="card-text">Exchange points for member-only gifts</p>
+                  </center>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <center>
+                  <a href=""><img src="logo image/return.png" class="card-img-top" alt="Image 3"></a>
+                  <div class="card-body">
+                    <h5 class="card-title">7-Day Return Policy</h5>
+                    <p class="card-text">No reason required</p>
+                  </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer w-100 ">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Quick Links</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="Equipments.html">Equipments</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                      <li><a href="Remedies.html">Remedies</a></li>
+                      <li><a href="Gallery.html">Gallery</a></li>
+                      <li><a href="Contact.html">Contact Us</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                  </ul>
+                </center>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Subscribe</h4> 
+                <hr>
+                <div class="subscribe-container">
+                  <input type="email" placeholder="Enter your email"  class="form-control">
+                  <input type="hidden" name="_captcha" value="false">
+                  <button type="submit" class=" btn btn-light mt-2">subscribe now</button>
+                </div>
+                <br>                
+                  <h4>Follow Us</h4>
+                  <ul class="footer-social">
+                    <li><a href="https://www.google.com.pk"><img src="logo image/google.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com"><img src="logo image/instagram.png" alt=""></a></li>
+                    <li><a href="https://www.pinterest.com"><img src="logo image/pinterest.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com"><img src="logo image/facebook.png" alt=""></a></li>
+                    <li><a href="https://www.Twitter.com"><img src="logo image/twitter.png" alt=""></a></li>
+                </ul>
+                <br>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Products</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="Shampoo.html">Shampoo</a></li>
+                    <li><a href="conditioner.html">Conditioner</a></li>
+                    <li><a href="Cream.html">Cream</a></li>
+                    <li><a href="Hair Mask.html">Hair Mask</a></li>
+                    <li><a href="Serum.html">Serum</a></li>
+                    <li><a href="spray.html">Spray</a></li>
+                </ul>
+              </center>
+              </div>
+              <div class="col-lg-3">
+                <center>
+                  <h4>Privacy</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Shipping Policy</a></li>
+                    <li><a href="">Return & Refund Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+              </center>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <footer class="py-5 footer-custom">
+    <div class="container">
+       <a href="Home.html"><p class="m-0 text-center text-light">© 2024 [HAIR CARE]</p></a>
+    </div>
+</footer>
+
+
+<script>
+  window.addEventListener('load' , function(){
+      document.querySelector('.pre-loader').className += ' hidden'
+  })
+</script>
+
+<script>
+  // Function to scroll to the top of the page
+  function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Smooth scrolling behavior
+      });
+  }
+  
+  // Show/hide back to top button based on scroll position
+  window.onscroll = function() {
+      var button = document.getElementById('back-to-top');
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  };
+</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+  
+      darkModeToggle.addEventListener("click", function() {
+        body.classList.toggle("dark");
+        body.classList.toggle("light");
+      });
+    });
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+

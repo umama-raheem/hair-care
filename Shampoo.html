@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+    padding-top: 56x; /* Adjusted for the fixed navbar height */
+    background-color:#ffffff;/* Black background color */
+    color: white#fff; /* White text color */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    }
+
+    nav {
+        box-shadow: 0 0 10px rgb(72, 64, 96);
+        background: rgb(72, 64, 96);
+    }
+
+    .icons{
+        margin: 20px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+    body {
+        padding-top:70px; /* Adjusted for the fixed navbar height in mobile view */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+  }
+
+  .light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .dark {
+    background-color: rgb(179, 168, 210);
+    color: #ffffff;
+  }
+
+    .dark-icon{
+      background: rgb(72, 64, 96);
+    }
+    
+    .dark-mode-toggle {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .dark-mode-toggle:hover {
+    color: #f8f9fa; /* slightly lighter shade on hover */
+  }
+      
+    .product-customs img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .btn {
+      background-color:  rgb(72, 64, 96);
+    }
+
+    .custom-cards {
+      background-color: rgb(72, 64, 96);
+      border-radius: 20px;
+      color: white;
+      display: flex;
+      margin-top: 90px;
+
+    }
+
+    .custom-cards img {
+      border-radius: 20px;
+      opacity: 0.8;
+    }
+
+    
+
+
+    .btn {
+      background-color:  rgb(72, 64, 96);
+      color: white;
+    }
+
+    .custom-cards {
+      background-color:  rgb(72, 64, 96);
+      border-radius: 20px;
+      color: white;
+    }
+
+    .custom-cards img {
+      height: 300px;
+      opacity: 0.8;
+    }
+
+    .category {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        }
+        .category:hover {
+        transform: scale(1.1);
+        }
+
+        .category img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+        .category a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        background: rgb(72, 64, 96);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+        .category:hover a {
+        opacity: 1;
+        }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+
+    .footer {
+            background-color:rgb(72, 64, 96);/* Footer background color */
+            color: #ecf0f1; /* Footer text color */
+            padding: 30px 0;
+
+        }
+
+        .footer a {
+            color: #ecf0f1; /* Footer link color */
+        }
+
+        .footer a:hover {
+            color: #ffffff; /* Footer link color on hover */
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn{
+            background-color:rgb(72, 64, 96);
+            color: white;
+        }
+
+        .footer-social li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact-form {
+            margin-top: 20px;
+        }
+        .footer-custom{
+        background-color:rgb(72, 64, 96); /* Footer background color */
+        color: #ffffff; /* Footer text color */
+        padding: 30px 0;
+      }
+
+        ::-webkit-scrollbar{
+          width: 10px;
+        }
+
+
+        ::-webkit-scrollbar-thumb{
+        background-color:rgb(72, 64, 96);
+        width: 15px;
+        border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+  <header>
+    <div class="container-fluid w-100 clr">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <i class="fa-solid fa-h  fa-2xl" style="color: #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color: #ffffffe8; "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <img src="My Hair My Canvas img/hair (1).png" alt="">
+                <i class="fa-solid fa-c  fa-2xl" style="color:  #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-e  fa-2xl" style="color:  #ffffffe8; "></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Equipments.html">Equipments</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Category.html">Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Remedies.html">Remedies</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Sign up.html"><img src="My Hair My Canvas img/log-in.png" alt="Icon 1 "></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                      <li class="nav-item">
+                        <a  class="nav-link"href="page2.html"><img src="My Hair My Canvas img/shopping-cart (1).png" alt="Icon 2"></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                    </ul>
+                    <button id="darkModeToggle" class="dark-mode-toggle">
+                      <img src="logo image/night.png" class="dark-icon" alt="">
+                    </button>
+                </div>
+               
+            </div>
+        </nav>
+    </header>
+
+        
+<hr>
+        <section>
+          <div class="container">
+              <h2 class="mt-4 mb-3">Categories</h2>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="d-flex justify-content-between">
+                    <div class="category">
+                      <img src="logo image/shampoo.png" alt="Category 2">
+                      <a href="Products.html"><h4>Shampoo</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-conditioner.png" alt="Category 1">
+                      <a href="conditioner.html"><h4>Conditioner</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-treatment.png" alt="Category 4">
+                      <a href="Hair Mask.html"><h4>Hair Mask</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/cream.png" alt="Category 3">
+                      <a href="Cream.html"><h4>Cream</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-care.png" alt="Category 5">
+                      <a href="Serum.html"><h4>Hair Serum</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/liquid-drop.png" alt="Category 6">
+                      <a href="Various oil.html"><h4>Hair Oils</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-spray.png" alt="Category 7">
+                      <a href="spray.html"><h4>Spray</h4></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+    <hr>
+        <section>
+          <div class="container mt-3">
+            <div class="row">
+              <center class="mt-3">
+              <a href="Products.html">
+                <i class="fa-solid fa-s  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-h  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-m  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-p  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-o fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-o  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+              </a>
+            </center>
+                <!-- First Product Card -->
+                <div class="col-md-3 ">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/BondRepairShampoo.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">RESTRUCTURING BOND REPAIR</h5>
+                      <p class="card-text">$19.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Second Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/VolumeShampoo.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">MULTIPLYING VOLUME</h5>
+                      <p class="card-text">$08.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Third Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/REPLENISHING MOISTURE.jfif" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">REPLENISHING MOISTURE</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--forth product card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/ColourHoldShampoo.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">REPLENISHING MOISTURE</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>      
+
+                
+          
+        
+          <!-- First Modal -->
+        
+          <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h2>RESTRUCTURING BOND REPAIR</h2>
+                    <hr>
+                    <p>A color safe shampoo that gently cleanses the hair, removes daily build up and adds shine 
+                      with each use. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Second Modal -->
+          <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>MULTIPLYING VOLUME</h2>
+                    <hr>
+                    <p>A gentle, daily, volumizing cleanser that boosts hair’s fullness and volume while 
+                      retaining moisture. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Third Modal -->
+          <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>REPLENISHING MOISTURE</h2>
+                    <hr>
+                    <p>A luxurious cleanser that works to restore moisture while protecting hair from
+                      color fade, daily stresses and future damage. Perfect for straight, wavy, curly, 
+                      coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- forth Modal -->
+          <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>REPLENISHING MOISTURE</h2>
+                    <hr>
+                    <p>A luxurious cleanser that works to restore moisture while protecting hair from
+                      color fade, daily stresses and future damage. Perfect for straight, wavy, curly, 
+                      coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <footer class="footer w-100 ">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                    <center>
+                      <h4>Quick Links</h4>
+                      <hr>
+                      <ul class="footer-menu">
+                          <li><a href="home.html">Home</a></li>
+                          <li><a href="Equipments.html">Equipments</a></li>
+                          <li><a href="Category.html">Category</a></li>
+                          <li><a href="Remedies.html">Remedies</a></li>
+                          <li><a href="Gallery.html">Gallery</a></li>
+                          <li><a href="Contact.html">Contact Us</a></li>
+                          <li><a href="Category.html">Category</a></li>
+                      </ul>
+                    </center>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <h4>Subscribe</h4> 
+                    <hr>
+                    <div class="subscribe-container">
+                      <input type="email" placeholder="Enter your email"  class="form-control">
+                      <input type="hidden" name="_captcha" value="false">
+                      <button type="submit" class=" btn btn-light mt-2">subscribe now</button>
+                    </div>
+                    <br>                
+                      <h4>Follow Us</h4>
+                      <ul class="footer-social">
+                        <li><a href="https://www.google.com.pk"><img src="logo image/google.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com"><img src="logo image/instagram.png" alt=""></a></li>
+                        <li><a href="https://www.pinterest.com"><img src="logo image/pinterest.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com"><img src="logo image/facebook.png" alt=""></a></li>
+                        <li><a href="https://www.Twitter.com"><img src="logo image/twitter.png" alt=""></a></li>
+                    </ul>
+                    <br>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <center>
+                      <h4>Products</h4>
+                      <hr>
+                      <ul class="footer-menu">
+                        <li><a href="Shampoo.html">Shampoo</a></li>
+                        <li><a href="conditioner.html">Conditioner</a></li>
+                        <li><a href="Cream.html">Cream</a></li>
+                        <li><a href="Hair Mask.html">Hair Mask</a></li>
+                        <li><a href="Serum.html">Serum</a></li>
+                        <li><a href="spray.html">Spray</a></li>
+                    </ul>
+                  </center>
+                  </div>
+                  <div class="col-lg-3">
+                    <center>
+                      <h4>Privacy</h4>
+                      <hr>
+                      <ul class="footer-menu">
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Shipping Policy</a></li>
+                        <li><a href="">Return & Refund Policy</a></li>
+                        <li><a href="">Cookie Policy</a></li>
+                    </ul>
+                  </center>
+                  </div>
+              </div>
+          </div>
+      </footer>
+      <footer class="py-5 footer-custom">
+        <div class="container">
+           <a href="Home.html"><p class="m-0 text-center text-light">© 2024 [HAIR CARE]</p></a>
+        </div>
+    </footer>
+
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const darkModeToggle = document.getElementById("darkModeToggle");
+          const body = document.body;
+      
+          darkModeToggle.addEventListener("click", function() {
+            body.classList.toggle("dark");
+            body.classList.toggle("light");
+          });
+        });
+      </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    darkModeToggle.addEventListener("click", function() {
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
+    });
+  });
+</script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

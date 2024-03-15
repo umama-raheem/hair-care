@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    body {
+    padding-top: 56x; /* Adjusted for the fixed navbar height */
+    background-color:#ffffff;/* Black background color */
+    color: white#fff; /* White text color */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    }
+
+    nav {
+        box-shadow: 0 0 10px rgba(124, 126, 165, 0.911);
+        background: rgb(72, 64, 96);
+    }
+
+    .icons{
+        margin: 20px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        body {
+        padding-top:70px; /* Adjusted for the fixed navbar height in mobile view */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+  }
+
+  .light {
+    background-color: #ffb5bb;
+    color: #000000;
+  }
+
+  .dark {
+    background-color:  rgb(179, 168, 210);
+    color: #ffffff;
+  }
+
+    .dark-icon{
+      background: rgb(72, 64, 96);
+    }
+    
+    .dark-mode-toggle {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .dark-mode-toggle:hover {
+    color: #f8f9fa; /* slightly lighter shade on hover */
+  }
+
+  #back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(72, 64, 96);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.911);
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .custom-btn {
+        background-color: khaki;
+    }
+
+    .custom-buy {
+        background-color: rgb(72, 64, 96);
+        text-decoration-color: rgb(247, 247, 247);
+
+    }
+
+    .card {
+        background-color:  rgb(72, 64, 96);
+        color: white;
+        border-radius: 20px;
+        border: 3px solid white;
+        height: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .card img{
+        border-radius: 20px;
+        padding: 20px;
+        width: 245px;
+        height: 200px;
+    }
+   
+    .card:hover{
+        box-shadow: 0 0 30px rgba(124, 126, 165, 0.911) !important;
+
+  }
+
+    
+    
+
+    .footer {
+            background-color:rgb(72, 64, 96);/* Footer background color */
+            color: #ecf0f1; /* Footer text color */
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #ecf0f1; /* Footer link color */
+        }
+
+        .footer a:hover {
+            color: #ffffff; /* Footer link color on hover */
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }      
+
+        .btn{
+            background-color:rgb(72, 64, 96);
+            color: white;
+        }
+
+        .footer-social li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact-form {
+            margin-top: 20px;
+        }
+
+        .footer-custom{
+        background-color:rgb(72, 64, 96); /* Footer background color */
+        color: #ffffff; /* Footer text color */
+        padding: 30px 0;
+      }
+
+        ::-webkit-scrollbar{
+       width: 10px;
+      }
+
+
+      ::-webkit-scrollbar-thumb{
+      background-color:rgb(72, 64, 96);
+      width: 15px;
+      border-radius: 20px;
+      }
+</style>
+</head>
+<body>
+
+    <button id="back-to-top" onclick="scrollToTop()"><img src="logo image/up-arrow.png" alt=""></button>
+    <header>
+        <div class="container-fluid w-100 clr">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <i class="fa-solid fa-h  fa-2xl" style="color: #ffffffe8;"></i>
+                    <i class="fa-solid fa-a  fa-2xl" style="color: #ffffffe8; "></i>
+                    <i class="fa-solid fa-i  fa-2xl" style="color:  #ffffffe8; "></i>
+                    <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                    <img src="My Hair My Canvas img/hair (1).png" alt="">
+                    <i class="fa-solid fa-c  fa-2xl" style="color:  #ffffffe8;"></i>
+                    <i class="fa-solid fa-a  fa-2xl" style="color:  #ffffffe8; "></i>
+                    <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                    <i class="fa-solid fa-e  fa-2xl" style="color:  #ffffffe8; "></i>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="Home.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Equipments.html">Equipments</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Products.html">Products</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Category.html">Category</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Remedies.html">Remedies</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Gallery.html">Gallery</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Contact.html">Contact</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#" ><img src="My Hair My Canvas img/log-in.png" alt="Icon 1 ">
+                            </a>
+                            <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                          </li>
+                          <li class="nav-item">
+                            <a  class="nav-link"href="#" id="cart-icon"><img src="My Hair My Canvas img/shopping-cart (1).png" alt="Icon 2">
+                                <span id="cartquantity" class="badge bg-primary"></span>
+                            
+                            </a>
+                            
+                            <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                          </li>
+                        </ul>
+                        <button id="darkModeToggle" class="dark-mode-toggle">
+                          <img src="logo image/night.png" class="dark-icon" alt="">
+                        </button>
+                    </div>
+                   
+                </div>
+            </nav>
+        </header>
+    <!-- NAV -->
+    <img src="hair care images/equiment baner.jpg" width="100%" alt="">
+
+    <!-- hair dryer -->
+    <section>
+        <h1 class="text-center ">HAIR DRYER</h1>
+        <div class="container">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item ">
+                    <a href="#blow " data-bs-toggle="tab" class="nav-link active ">blow Dryer</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hood" data-bs-toggle="tab" class="nav-link">hood Dryer</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+    
+                <!-- blow dryer -->
+                <div class="tab-pane active" id="blow">
+                    <div class="container">
+                        <div class="row gy-4">
+                            <!-- first card start -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <!-- icons -->
+                                    <div
+                                        style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72,64,96) ; padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modal1" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/bd1.webp" width="100%"
+                                        height="230px" alt="">
+                                    <div class="card-body ">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="modal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1>hair dryer</h1>
+                                            <p>Why are hair dryers so important? Blow drying helps to pre-mould your hair
+                                                into a style. It plays a part in every haircut service we provide at Murdock
+                                                as it effectively takes the moisture out of hair, causing less frizz and
+                                                creates a natural overall body and shape to style away at Rs:3500 </p>
+                                            <div>
+                                                <button class="btn add-to-cart" data-id="1">add to cart</button>
+                                                <button class="btn custom-buy">buy now </button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second card -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <div
+                                        style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modal2" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/bd2.jpg" height="230px"
+                                        alt="">
+                                    <div class="card-body">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$80</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="modal2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                                <p>The process involves directing hot air from the dryer onto wet or damp hair to expedite the evaporation of water. But it's not just about drying; blow drying also helps shape, smooth, and add volume to your hair, contributing to the overall advantages of blow drying hair.
+                                                    Rs:4500 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="2">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- third card -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <div
+                                        style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modal3" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/bd3.jpg"
+                                        height="230" alt="">
+                                    <div class="card-body">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$30</span></h6>
+                                            <div class="modal" id="modal3">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h><b>hair dryer</b> <span
+                                                                    style="margin-left: 100px;">$40</span></h6>
+                                                                <p class="text-dark">hair blow dryer. Super heat, best
+                                                                    price, and quality (fresh condition). Rs:3500 </p>
+                                                                <div>
+                                                                    <button class="btn add-to-cart" data-id="3">add to cart</button>
+                                                                    <button class="btn custom-buy">buy now </button>
+                                                                </div>
+    
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="modal" id="modal2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                                <p>The process begins with a soothing hair wash and scalp massage, that will leave you feeling relaxed and ready to have your hair lifted, dried, and styled. A good hairdresser will use a shampoo and conditioner that suits your hair type, as well as the kind of blowdry, and finish, that you want
+                                                    Rs:3000 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="4">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fourth card -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <!-- icons -->
+                                    <div
+                                        style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modal1" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/bd4.webp"
+                                        width="100%" height="230px" alt="">
+                                    <div class="card-body ">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="modal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1>hair dryer</h1>
+                                            <p>Is Blowdrying hair better?
+                                                “Gently blow drying with the right hairdryer on the lowest heat and speed setting until it is 90 percent dry, is actually better for the hair than air-drying,”Rs:5000 </p>
+                                            <div>
+                                                <button class="btn add-to-cart" data-id="5">add to cart</button>
+                                                <button class="btn custom-buy">buy now </button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <!-- hooded dryer -->
+                <div class="tab-pane " id="hood">
+                    <div class="container gy-4">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <!-- icons -->
+                                    <div
+                                        style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modalh1" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/hd1.jpg" width="100%" height="230px"
+                                        alt="">
+                                    <div class="card-body ">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="modalh1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1>hood dryer</h1>
+                                            <p>What is a hooded hair dryer? For those unfamiliar with hooded dryers, they're
+                                                a dome-shaped tool that dry hair quickly and evenly distributes hot air so
+                                                the heat is diffused. Roller sets, bleaching foils, and deep conditioning
+                                                treatments are just some of the services where you may find yourself under
+                                                one (fresh condition). Rs:9000 </p>
+                                            <div>
+                                                <button class="btn add-to-cart" data-id="6">add to cart</button>
+                                                <button class="btn custom-buy">buy now </button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second card -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <div
+                                        style="background-color:rgb(72,64,96);width: 12%; position: absolute; float: left; margin-left: 10px; padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modalh2" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/hd2.webp"
+                                        height="230px" alt="">
+                                    <div class="card-body">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="modal" id="modalh2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h><b>hood dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                                <p>What is a hooded hair dryer? For those unfamiliar with hooded dryers,
+                                                    they're a dome-shaped tool that dry hair quickly and evenly distributes
+                                                    hot air so the heat is diffused. Roller sets, bleaching foils, and deep
+                                                    conditioning treatments are just some of the services where you may find
+                                                    yourself under one Rs:5000 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="7">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- third card -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <div
+                                        style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modalh3" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/hd3.jpg"
+                                        height="230" alt="">
+                                    <div class="card-body">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                            <div class="modal" id="modalh3">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h><b>hair dryer</b> <span
+                                                                    style="margin-left: 100px;">$40</span></h6>
+                                                                <p>hair blow dryer. Super heat, best price, and quality
+                                                                    (fresh condition). Rs:3500 </p>
+                                                                <div>
+                                                                    <button class="btn add-to-cart" data-id="8">add to cart</button>
+                                                                    <button class="btn custom-buy">buy now </button>
+                                                                </div>
+    
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="modal" id="modal1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1>hair dryer</h1>
+                                            <p>What is a hooded hair dryer? For those unfamiliar with hooded dryers, they're
+                                                a dome-shaped tool that dry hair quickly and evenly distributes hot air so
+                                                the heat is diffused. Roller sets, bleaching foils, and deep conditioning
+                                                treatments are just some of the services where you may find yourself under
+                                                one Rs:7500 </p>
+                                            <div>
+                                                <button class="btn add-to-cart" data-id="9">add to cart</button>
+                                                <button class="btn custom-buy">buy now </button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fourth card -->
+                            <div class="col-lg-3">
+                                <div class="card shadow-lg">
+                                    <!-- icons -->
+                                    <div
+                                        style="background-color:rgb(72,64,96);;width: 12%; position: absolute; float: left; margin-left: 10px; padding: 5px; border-radius: 2px;">
+                                        <a href="">
+                                            <i class="fa-solid fa-cart-shopping text-light"></i>
+                                        </a><br>
+                                        <a href="">
+                                            <i class="fa-regular fa-heart text-light"></i>
+                                        </a><br>
+                                        <a href="#modalh4" data-bs-toggle="modal">
+                                            <i class="fa-solid fa-circle-info text-light"></i>
+                                        </a>
+                                    </div>
+                                    <img src="hair care images/hd4.png" width="100%" height="230px" alt=""
+                                        style="background-color: white;">
+                                    <div class="card-body " style=" background-color:rgb(72,64,96);">
+                                        <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal" id="modalh4">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1>hood dryer</h1>
+                                            <p>What is a hooded hair dryer? For those unfamiliar with hooded dryers, they're
+                                                a dome-shaped tool that dry hair quickly and evenly distributes hot air so
+                                                the heat is diffused. Roller sets, bleaching foils, and deep conditioning
+                                                treatments are just some of the services where you may find yourself under
+                                                one. Super heat, best price, and quality (fresh condition). Rs:3500 </p>
+                                            <div>
+                                                <button class="btn add-to-cart" data-id="10">add to cart</button>
+                                                <button class="btn custom-buy">buy now </button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    
+    <!-- STRAIGHTNERS -->
+    <section>
+        <h1 class="text-center mt-5">STRAIGHTNERS</h1>
+        <div class="tab-pane active" id="">
+            <div class="container gy-4">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <!-- icons -->
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modals1" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/st1.webp"
+                                width="100%" height="230px" alt="">
+                            <div class="card-body ">
+                                <h><b>straightener</b> <span style="margin-left: 100px;">$40</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modals1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>STRAIGHTNERS
+                                    </h1>
+                                    <p>When it comes to hot styling tools, many long-haired individuals count their flat irons among the most important. Rs:4000</p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="11">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modals2" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/st2.jpg"
+                                height="230px" alt="">
+                            <div class="card-body">
+                                <h><b>straightener</b> <span style="margin-left: 100px;">$50</span></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal" id="modals2">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h><b>straighteners</b> <span style="margin-left: 100px;">$40</span></h6>
+                                        <p>Typically used to tame frizzy hair, smooth unruly hair, and support those
+                                            trying an intricate hair style, straighteners have long been the go-to for
+                                            those looking to add a sleek finish to their hair – whether in an up-do or
+                                            left to flow naturally.(fresh condition). Rs:5000 </p>
+                                        <div>
+                                            <button class="btn add-to-cart" data-id="12">add to cart</button>
+                                            <button class="btn custom-buy">buy now </button>
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modalstr3" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/st3.jpg"
+                                height="230" alt="">
+                            <div class="card-body">
+                                <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                    <div class="modal" id="modalstr3">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body text-dark">
+                                                    <h><b>STR</b> <span style="margin-left: 100px;">$40</span>
+                                                        </h6>
+                                                        <p>Typically used to tame frizzy hair, smooth unruly hair, and
+                                                            support those trying an intricate hair style, straighteners
+                                                            have long been the go-to for those looking to add a sleek
+                                                            finish to their hair – whether in an up-do or left to flow
+                                                            naturally. (fresh condition). Rs:6000 </p>
+                                                        <div>
+                                                            <button class="btn add-to-cart" data-id="13">add to cart</button>
+                                                            <button class="btn custom-buy">buy now </button>
+                                                        </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal" id="modals3">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1 >straighteners</h1>
+                                    <p class="text-dark">While we all love it, hair straightening is not so great for your hair. The side effects of hair straightening can even lead to permanent damage. Rs:8000 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="14">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <!-- icons -->
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modals4" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/st4.jpg"
+                                width="100%" height="230px" alt="">
+                            <div class="card-body ">
+                                <h>straightener<b></b> <span style="margin-left: 100px;">$40</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modals4">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>modals4</h1>
+                                    <p>Ceramic hair straighteners are great for smoothening out hair and reducing frizz. Ceramic plates evenly distribute heat, hold heat for long and control heat. The plates are either ceramic coated, ceramic plate or tourmaline plate or coated. Ceramic plates are best for fine or thin hair. Rs:4500 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="15">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+    <!-- SPRAY BOTTLES -->
+    <section>
+        <h1 class="text-center my-3">SPRAY BOTTLES</h1>
+        <div class="tab-pane active" id="">
+            <div class="container">
+                <div class="row gy-4">
+                    <!-- first card start -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <!-- icons -->
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal12" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/spray1.jpg"
+                                width="100%" height="230px" alt="">
+                            <div class="card-body ">
+                                <h><b>spray bottle</b> <span style="margin-left: 100px;">$40</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal12">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>spray bottle</h1>
+                                    <p>Spray bottles are excellent for spraying detergents, disinfectants and other liquids, including viscous liquids, into difficult to reach areas. Spray bottles generally come with easy a chemically resistant trigger sprayer or pump sprayer.Rs:300 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="16">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal112" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/spray2.jpg"
+                                height="230px" alt="">
+                            <div class="card-body">
+                                <h><b>spray bottle</b> <span style="margin-left: 100px;">$50</span></h6>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="modal" id="modal112">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>spray bottle</h1>
+                                    <p>The hair water spray bottle will keep your hair refreshed between washes, add volume, and help you achieve salon-like hair( high quality and fresh condition.)  Rs:1000 </p>
+                                        
+                                        <div>
+                                            <button class="btn add-to-cart" data-id="17">add to cart</button>
+                                            <button class="btn custom-buy">buy now </button>
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72, 64, 96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal113" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/spray3.jpg"
+                                height="230" alt="">
+                            <div class="card-body">
+                                <h><b>spray bottle</b> <span style="margin-left: 100px;">$50</span></h6>
+                                    <div class="modal" id="modal3">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h1>spray bottle</h1>
+                                    <p>Spray bottles are excellent for spraying detergents, disinfectants and other liquids, including viscous liquids, into difficult to reach areas. Spray bottles generally come with easy a chemically resistant trigger sprayer or pump sprayer. </p>
+                                                        <div>
+                                                            <button class="btn add-to-cart" data-id="18">add to cart</button>
+                                                            <button class="btn custom-buy">buy now </button>
+                                                        </div>
+    
+                                                </div>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="modal" id="modal113">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>spray bottle</h1>
+                                    <p>>The hair water spray bottle will keep your hair refreshed between washes, add volume, and help you achieve salon-like hair( high quality and fresh condition.)  Rs:1000 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="19">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <!-- icons -->
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal114" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/spray4.jpg"
+                                width="100%" height="230px" alt="">
+                            <div class="card-body ">
+                                <h><b>spray bottle</b> <span style="margin-left: 100px;">$40</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal114">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>spray bottle</h1>
+                                    <p>Spray bottles are excellent for spraying detergents, disinfectants and other liquids, including viscous liquids, into difficult to reach areas. Spray bottles generally come with easy a chemically resistant trigger sprayer or pump sprayer.Rs:800 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="20">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <!-- hair steamer -->
+    <section>
+        <h1 class="text-center my-3">HAIR STEAMERS </h1>
+        <div class="tab-pane active" id="">
+            <div class="container">
+                <div class="row gy-4">
+                    <!-- first card start -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <!-- icons -->
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal1h" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/steamer1.jpg" width="100%"
+                                height="230px" alt="">
+                            <div class="card-body ">
+                                <h><b>hair steamer</b> <span style="margin-left: 100px;">$40</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal1h">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>hair Steamers</h1>
+                                    <p>While clothing steamers smooth wrinkles, a hair steamer works more akin to a face steamer, which opens pores to decongest and let skincare ingredients sink in deeper. On hair, it's the cuticle that is opened up by the steam so that cleansers and sulfate-free shampoos can get rid of buildup and moisture can flow in.Rs:15000 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="21">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color:rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal2h" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/steamer1.jpg" height="230px" alt="">
+                            <div class="card-body">
+                                <h><b>hair steamer</b> <span style="margin-left: 100px;">$50</span></h6>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="modal" id="modal2h">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>hair Steamer</h1>
+                                    <p>Steaming the hair and scalp during your regular regimen can help to unclog pores in the scalp, which can help encourage healthy hair. Hair steaming will also allow toxins from the scalp to be released so that it can be purified, and it helps increase the collagen production and blood flow to the scalp.Rs: 12000</p>
+                                        <div>
+                                            <button class="btn add-to-cart" data-id="22">add to cart</button>
+                                            <button class="btn custom-buy">buy now </button>
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal3h" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/steamer3.jpg" height="230" alt="">
+                            <div class="card-body">
+                                <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                    <div class="modal" id="modal3">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                                        <p>hair blow dryer. Super heat, best price, and quality (fresh
+                                                            condition). Rs:3500 </p>
+                                                        <div>
+                                                            <button class="btn add-to-cart" data-id="23">add to cart</button>
+                                                            <button class="btn custom-buy">buy now </button>
+                                                        </div>
+    
+                                                </div>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="modal" id="modal3h">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>hair steamer</h1>
+                                    <p>Steaming hair keeps your scalp clean and healthy. The warm steam helps loosen dirt, grime and dead skin cells on the scalp. So shampooing after hair steaming enhances the cleansing process. A mild, herbal shampoo is best for hair that has been steamed.Rs:130000</p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="24">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fourth card -->
+                    <div class="col-lg-3">
+                        <div class="card shadow-lg">
+                            <!-- icons -->
+                            <div
+                                style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                <a href="">
+                                    <i class="fa-solid fa-cart-shopping text-light"></i>
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-regular fa-heart text-light"></i>
+                                </a><br>
+                                <a href="#modal11h" data-bs-toggle="modal">
+                                    <i class="fa-solid fa-circle-info text-light"></i>
+                                </a>
+                            </div>
+                            <img src="hair care images/steamer4.webp"
+                                width="100%" height="230px" alt="">
+                            <div class="card-body ">
+                                <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal11h">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>hair dryer4</h1>
+                                    <p>“Steaming is using moist heat to open the hair cuticle to allow benefits of treatments, oils, and masks to penetrate deeper into the hair fiber for maximum hydration and moisturization,” says Hill. “When the steam produces moist heat, the cuticle slowly, gently swells and is infused equally with water and treatmentRs:16500 </p>
+                                    <div>
+                                        <button class="btn add-to-cart" data-id="25">add to cart</button>
+                                        <button class="btn custom-buy">buy now </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- massagers -->
+                    <h1 class="text text-center">MASSAGERS</h1>
+                    <div class="tab-pane active" id="">
+                        <h1 class="text-center"></h1>
+                        <div class="container">
+                            <div class="row gy-4">
+                                <!-- first card start -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <!-- icons -->
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal1m" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/Massager-1.jpg"
+                                            width="100%" height="230px" alt="">
+                                        <div class="card-body ">
+                                            <h><b>hair dryer</b> <span style="margin-left: 100px;">$40</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="modal1m">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>massagers</h1>
+                                                <p>It stimulates the scalp's circulation and therefore helps prevent dandruff as well as stimulating hair growth. It has a calming effect and helps relax muscle tension. It helps relieve the symptoms of depression. It helps prevent sexual apathy and headaches.
+                                                    Rs:500 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="26">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- second card -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal2m" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/Massager2.jpg"
+                                            height="230px" alt="">
+                                        <div class="card-body">
+                                            <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="modal" id="modal2m">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h><b>massagers</b> <span style="margin-left: 100px;">$40</span></h6>
+                                                    <p>With that being said, anyone who finds scalp massage relaxing can most benefit from using one, says Dr. Marcus. “Those who suffer from tension headaches may find that a scalp massager offers relief,” she adds. Scalp massagers may also relieve symptoms of itch and help remove excess dandruff or flakes, says Dr Rs:200 </p>
+                                                    <div>
+                                                        <button class="btn add-to-cart" data-id="27">add to cart</button>
+                                                        <button class="btn custom-buy">buy now </button>
+                                                    </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- third card -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal3m" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/massager3.webp"
+                                            height="230" alt="">
+                                        <div class="card-body">
+                                            <h><b>hair dryer</b> <span style="margin-left: 100px;">$50</span></h6>
+                                                <div class="modal" id="modal3m">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body text-dark">
+                                                                <h><b>hair dryer</b> <span
+                                                                        style="margin-left: 100px;">$40</span></h6>
+                                                                    <p>hair blow dryer. Super heat, best price, and quality
+                                                                        (fresh condition). Rs:3500 </p>
+                                                                    <div>
+                                                                        <button class="btn add-to-cart" data-id="28">add to cart</button>
+                                                                        <button class="btn custom-buy">buy now </button>
+                                                                    </div>
+    
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <div class="modal" id="modal1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>masagers</h1>
+                                                <p class="text-dark">It stimulates the scalp's circulation and therefore helps prevent dandruff as well as stimulating hair growth. It has a calming effect and helps relax muscle tension. It helps relieve the symptoms of depression. It helps prevent sexual apathy and headaches.
+                                                    Rs:500 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="29">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fourth card -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <!-- icons -->
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal1x" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/massager4.webp"
+                                            width="100%" height="230px" alt="">
+                                        <div class="card-body ">
+                                            <h><b>massagers</b> <span style="margin-left: 100px;">$40</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="modal1x">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>massagers</h1>
+                                                <p>1. Helps massage scalp, promote blood circulation, reduce stress and mental fatigue, improve sleep quality, and improve hair loss. <br> 2. Suitable for athletes, tired people, elderly, indoor workers, driver and other people with headache or stress. <br> Rs:800 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="30">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                           <!-- spa caps -->
+                    <h1 class="text text-center">SPA CAPS</h1>
+                    <div class="tab-pane active" id="">
+                        <h1 class="text-center"></h1>
+                        <div class="container">
+                            <div class="row gy-4">
+                                <!-- first card start -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <!-- icons -->
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal1SC" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/cap1.webp"
+                                            width="100%" height="230px" alt="">
+                                        <div class="card-body ">
+                                            <h><b>SPA CAPS</b> <span style="margin-left: 100px;">$40</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="modal1SC">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>SPA CAPS</h1>
+                                                <p>Slove Various Hair Problems: Hair care SPA cap can effectively reduce hair damage, solve hair frizz and hair ends spilt, and deeply nourish your hair. Considerate Design: Equipped with a high quality plastic film, extra waterproof and anti-electric, also easy to use and detach.Rs:4000 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="31">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- second card -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal2SC" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/spa3.webp"
+                                            height="230px" alt="">
+                                        <div class="card-body">
+                                            <h>SPA CAPS<b></b> <span style="margin-left: 100px;">$50</span></h6>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="modal" id="modal2SC">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>SPA CAPS</h1>
+                                                <p>f there is too much moisture in the air, then your hair will get frizzy. That's why you should place a shower cap over your hair. It can keep your hair in place and if you get a cotton-lined one, it can act as a barrier against moisture and humidity. Rs:4500 </p>
+                                                    <div>
+                                                        <button class="btn add-to-cart" data-id="32">add to cart</button>
+                                                        <button class="btn custom-buy">buy now </button>
+                                                    </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- third card -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal3SC" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/spa2.webp"
+                                            height="230" alt="">
+                                        <div class="card-body">
+                                            <h><b>SPA CAPS</b> <span style="margin-left: 100px;">$50</span></h6>
+                                                <div class="modal" id="modal3SC">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                                            </div>
+                                                            <div class="modal-body text-dark" >
+                                                                <h1>SPA CAPS</h1>
+                                                <p>Benefits – Better Circulation in Scalp leading to better hair growth – Cleanses Scalp, removing dirt and dead skin – Brings moisture to your Roots and hair shaft – Leaves your hair soft and smooth – Great for Dandruff Sufferer's – Stops Dryness and hair Breakage – Makes hair stronger and healthier . Rs:2000 </p>
+                                                                    <div>
+                                                                        <button class="btn add-to-cart" data-id="33">add to cart</button>
+                                                                        <button class="btn custom-buy">buy now </button>
+                                                                    </div>
+    
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <div class="modal" id="modal3SC">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>SPA CAPS</h1>
+                                                <p>What are the benefits of a thermal cap?
+                                                    Application of gentle heat to the scalp with the thermal cap will also stimulate an increase in blood flow to the scalp, which can support hair growth. The best approach to healthier hair and shiny, nourished locks is to use a thermal cap together with your deep conditioning or oil treatment. Rs:6000 </p>
+                                                
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="34">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fourth card -->
+                                <div class="col-lg-3">
+                                    <div class="card shadow-lg">
+                                        <!-- icons -->
+                                        <div
+                                            style="width: 12%; position: absolute; float: left; margin-left: 10px; background-color: rgb(72,64,96); padding: 5px; border-radius: 2px;">
+                                            <a href="">
+                                                <i class="fa-solid fa-cart-shopping text-light"></i>
+                                            </a><br>
+                                            <a href="">
+                                                <i class="fa-regular fa-heart text-light"></i>
+                                            </a><br>
+                                            <a href="#modal1SC" data-bs-toggle="modal">
+                                                <i class="fa-solid fa-circle-info text-light"></i>
+                                            </a>
+                                        </div>
+                                        <img src="hair care images/spa4.jpg"
+                                            width="100%" height="230px" alt="">
+                                        <div class="card-body ">
+                                            <h><b>SPA CAPS</b> <span style="margin-left: 100px;">$40</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" id="modal1SC">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h1>SPA CAPS</h1>
+                                                <p>They say that it does the job, is worth the money, and provides superb results. Some mention that the packaging is nice and the product is better constructed than other caps they have had. Customers find the hair dryer easy to use. They mention that the cap is easy to put on and the instructions are clear Rs:7000 </p>
+                                                <div>
+                                                    <button class="btn add-to-cart" data-id="35">add to cart</button>
+                                                    <button class="btn custom-buy">buy now </button>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+         <footer class="footer w-100 ">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Quick Links</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="Equipments.html">Equipments</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                      <li><a href="Remedies.html">Remedies</a></li>
+                      <li><a href="Gallery.html">Gallery</a></li>
+                      <li><a href="Contact.html">Contact Us</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                  </ul>
+                </center>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Subscribe</h4> 
+                <hr>
+                <div class="subscribe-container">
+                  <input type="email" placeholder="Enter your email"  class="form-control">
+                  <input type="hidden" name="_captcha" value="false">
+                  <button type="submit" class=" btn btn-light mt-2">subscribe now</button>
+                </div>
+                <br>                
+                  <h4>Follow Us</h4>
+                  <ul class="footer-social">
+                    <li><a href="https://www.google.com.pk"><img src="logo image/google.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com"><img src="logo image/instagram.png" alt=""></a></li>
+                    <li><a href="https://www.pinterest.com"><img src="logo image/pinterest.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com"><img src="logo image/facebook.png" alt=""></a></li>
+                    <li><a href="https://www.Twitter.com"><img src="logo image/twitter.png" alt=""></a></li>
+                </ul>
+                <br>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Products</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="Shampoo.html">Shampoo</a></li>
+                    <li><a href="conditioner.html">Conditioner</a></li>
+                    <li><a href="Cream.html">Cream</a></li>
+                    <li><a href="Hair Mask.html">Hair Mask</a></li>
+                    <li><a href="Serum.html">Serum</a></li>
+                    <li><a href="spray.html">Spray</a></li>
+                </ul>
+              </center>
+              </div>
+              <div class="col-lg-3">
+                <center>
+                  <h4>Privacy</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Shipping Policy</a></li>
+                    <li><a href="">Return & Refund Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+              </center>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <footer class="py-5 footer-custom">
+    <div class="container">
+       <a href="Home.html"><p class="m-0 text-center text-light">© 2024 [HAIR CARE]</p></a>
+    </div>
+</footer>
+
+      <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+          button.addEventListener('click' ,addToCart);
+          
+        });
+        function addToCart(event){
+          event.preventDefault();
+          const productId = event.target.dataset.id;
+      
+          let cart = JSON.parse(localStorage.getItem('cart')) || {};
+      
+          cart[productId] = (cart[productId] || 0)+1;
+          updatecartQuantity(cart);
+          localStorage.setItem('cart',JSON.stringify(cart));
+        }
+      
+        function updatecartQuantity(cart){
+          const cartQunatity = Object.values(cart).reduce((acc,val)=>acc+val,0);
+          document.getElementById('cartquantity').textContent = cartQunatity;
+        }
+      
+        document.getElementById('cart-icon').addEventListener('click',showCart);
+      
+        function showCart(){
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+      
+        document.getElementById('cart-modal-body').innerHTML = '';
+      
+        for(const productId in cart){
+          const quantity = cart[productId];
+          const productHTML = `
+          <div class="row border-bottom py-2">
+              <div class="col-2">
+                  <img src="hair care images/bd1.webp" height="50px"  alt="">
+              </div>
+              <div class="col-6">
+                  <p>equipments</p>
+                  <p>Price : ${quantity}</p>
+              </div>
+              <div class="col-4 align-self-center">
+                  <button class="btn btn-danger delete-from-cart" data-id="${productId}">Delete</button>
+              </div>
+          </div>
+          `;
+          document.getElementById('cart-modal-body').innerHTML += productHTML;
+        }
+       // Show the cart modal
+       const myModal = new bootstrap.Modal(document.getElementById('cart-modal'));
+                  myModal.show();
+      
+                  // Add event listener to delete buttons
+                  document.querySelectorAll('.delete-from-cart').forEach(button => {
+                      button.addEventListener('click', deleteFromCart);
+                  });
+              }
+      
+              // Function to handle deleting items from cart
+              function deleteFromCart(event) {
+                  const productId = event.target.dataset.id;
+      
+                  // Get cart data from localStorage
+                  let cart = JSON.parse(localStorage.getItem('cart')) || {};
+      
+                  // Remove product from cart
+                  delete cart[productId];
+      
+                  // Update cart quantity badge
+                  updatecartQuantity(cart);
+      
+                  // Update localStorage
+                  localStorage.setItem('cart', JSON.stringify(cart));
+      
+                  // Refresh cart modal
+                  showCart();
+              }
+      
+        
+      
+      
+        const initCart = JSON.parse(localStorage.getItem('cart')) || {};
+        updatecartQuantity(initCart);
+      </script>
+      
+      <!-- Cart Modal -->
+      <div class="modal fade" id="cart-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cart-modal-label">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body  bg-info" id="cart-modal-body">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <!-- add to cart End -->
+      
+
+      <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling behavior
+            });
+        }
+        
+        // Show/hide back to top button based on scroll position
+        window.onscroll = function() {
+            var button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+      </script>
+      
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const darkModeToggle = document.getElementById("darkModeToggle");
+            const body = document.body;
+        
+            darkModeToggle.addEventListener("click", function() {
+              body.classList.toggle("dark");
+              body.classList.toggle("light");
+            });
+          });
+        </script>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+      </body>
+      </html>
+      

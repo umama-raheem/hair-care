@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+
+body {
+    padding-top: 56x; /* Adjusted for the fixed navbar height */
+    background-color:#ffffff;/* Black background color */
+    color: white#fff; /* White text color */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    }
+
+    nav {
+        box-shadow: 0 0 10px rgba(124, 126, 165, 0.911);
+        background: rgb(72, 64, 96);
+    }
+
+    .icons{
+        margin: 20px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        body {
+        padding-top:70px; /* Adjusted for the fixed navbar height in mobile view */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    }
+
+    .bgimg{
+    background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)) ,url(https://www.cisa.gov/sites/default/files/styles/hero_large/public/2023-08/HERO%20-%20Contact%20Us%20Landing%20Page%20-%201600x600px.png?h=e0d9a4bb&itok=q-0MZztr);
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+  }
+
+  .light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .dark {
+    background-color: rgb(179, 168, 210);
+    color: #ffffff;
+  }
+
+    .dark-icon{
+      background: rgb(72, 64, 96);
+    }
+    
+    .dark-mode-toggle {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .dark-mode-toggle:hover {
+    color: #f8f9fa; /* slightly lighter shade on hover */
+  }
+
+  .contact-custom{
+    margin-top: 120px;
+    background: rgb(144, 134, 175);
+    color: white;
+    border: 5px solid rgb(72, 64, 96);
+    border-radius: 20px;
+  }
+
+  .contact-custom1{
+    margin-top: 20px;
+    background: rgb(144, 134, 175);
+    color: white;
+    border: 5px solid rgb(72, 64, 96);
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-text{
+    text-align: center;
+    padding: 20px;
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+    
+  }
+}
+table {
+  width: 100%;
+  height: 250px;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(207, 197, 235);
+}
+  .btn2{
+    margin: 10px;
+  }
+
+  
+    
+    .footer {
+            background-color:rgb(72, 64, 96);/* Footer background color */
+            color: #ecf0f1; /* Footer text color */
+            padding: 30px 0;
+           
+        }
+
+        .footer a {
+            color: #ecf0f1; /* Footer link color */
+        }
+
+        .footer a:hover {
+            color: #ffffff; /* Footer link color on hover */
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn{
+            background-color:rgb(72, 64, 96);
+            color: white;
+        }
+
+        .footer-social li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact-form {
+            margin-top: 20px;
+        }
+        
+        .footer-custom{
+        background-color:rgb(72, 64, 96); /* Footer background color */
+        color: #ffffff; /* Footer text color */
+        padding: 30px 0;
+      }
+
+        ::-webkit-scrollbar{
+          width: 10px;
+        }
+
+
+        ::-webkit-scrollbar-thumb{
+        background-color:rgb(72, 64, 96);
+        width: 15px;
+        border-radius: 20px;
+        }
+    
+</style>
+<body>
+
+  <header>
+    <div class="container-fluid w-100 clr">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+              <a href="Home.html">
+                <i class="fa-solid fa-h  fa-2xl" style="color: #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color: #ffffffe8; "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <img src="My Hair My Canvas img/hair (1).png" alt="">
+                <i class="fa-solid fa-c  fa-2xl" style="color:  #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-e  fa-2xl" style="color:  #ffffffe8; "></i>
+              </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Equipments.html">Equipments</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Category.html">Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Remedies.html">Remedies</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Sign up.html"><img src="My Hair My Canvas img/log-in.png" alt="Icon 1 "></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                      <li class="nav-item">
+                        <a  class="nav-link"href="page2.html"><img src="My Hair My Canvas img/shopping-cart (1).png" alt="Icon 2"></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                    </ul>
+                    <button id="darkModeToggle" class="dark-mode-toggle">
+                      <img src="logo image/night.png" class="dark-icon" alt="">
+                    </button>
+                </div>
+               
+            </div>
+        </nav>
+    </header>
+ 
+    
+    <section>
+      <div class="container-fluid contact-custom">
+        <div class="row">
+          <div class=" col-md-6 col-lg-6 col-sm-12 col-12  ">
+              <center>
+            <h1 class="display">CONTACT US</h1>
+          </center>
+            <form class="footer-contact-form " action="https://formsubmit.co/babiya867@gmail.com" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+                <center>
+                <button type="submit" class="btn btn-light btn2">Send Message</button>
+              </center>
+            </form>
+          </div>
+          <div class=" col-md-6 col-lg-6 col-sm-12 col-12">
+            <center>
+            <h1 class="display">WELCOME!</h1>
+          </center>
+              <p class="lead"> to our contact page, your gateway to seamless communication! 
+                Whether you have questions, feedback, or simply want to connect, you're in the right 
+                place. Feel free to reach out to us, and our dedicated team will be delighted to 
+                assist you. Your inquiries are valuable to us, and we look forward to hearing from 
+                you soon!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="container-fluid contact-custom1">
+        <div class="row">
+          <div class=" col-md-6 col-lg-6 contact-text">
+            <h1 class="display">ABOUT US</h1>
+            <table>
+              <tr>
+                <td>ADDRESS :</td>
+                <td>Aptech Learning Korangi
+                    C-21, Lucknow Society Sector 31 E Korangi,
+                     Karachi, Karachi City, Sindh</td>
+              </tr>
+              <tr>
+                <td>EMAIL :</td>
+                <td><a href="">Lisa15@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td>NUMBER :</td>
+                <td>09876472899</td>
+              </tr>
+              <tr>
+                <td>Monday - Friday: 
+                  9:00 AM - 5:00 PM</td>
+                <td>Saturday: 10:00 AM - 2:00 PM</td>
+              </tr>
+              <tr>
+                <td>Row 5, Column 1</td>
+                <td>Row 5, Column 2</td>
+              </tr>
+            </table>
+          </div>
+          <div class=" col-md-6 col-lg-6 contact-text">
+            <center>
+            <h1 class="display">LOCATION</h1>
+              <div class="mapouter">
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=aptech+korangi&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://online-timer.me/"></a><br><a href="https://www.clock-alarm.com/"></a><br><style>.mapouter{position: relative;text-align: right;height: 300px;width: 300px;}</style><a href="https://www.ongooglemaps.com">adding google map to website</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 300px;width: 300px;}</style></div></div>
+              </div>
+              </center>  
+        </div>
+      </div>
+    </section>
+    
+
+
+
+
+    <footer class="footer w-100 ">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-lg-3">
+                <center>
+                  <h4>Quick Links</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="Equipments.html">Equipments</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                      <li><a href="Remedies.html">Remedies</a></li>
+                      <li><a href="Gallery.html">Gallery</a></li>
+                      <li><a href="Contact.html">Contact Us</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                  </ul>
+                </center>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Subscribe</h4> 
+                <hr>
+                <div class="subscribe-container">
+                  <input type="email" placeholder="Enter your email"  class="form-control">
+                  <input type="hidden" name="_captcha" value="false">
+                  <button type="submit" class=" btn btn-light mt-2">subscribe now</button>
+                </div>
+                <br>                
+                  <h4>Follow Us</h4>
+                  <ul class="footer-social">
+                    <li><a href="https://www.google.com.pk"><img src="logo image/google.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com"><img src="logo image/instagram.png" alt=""></a></li>
+                    <li><a href="https://www.pinterest.com"><img src="logo image/pinterest.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com"><img src="logo image/facebook.png" alt=""></a></li>
+                    <li><a href="https://www.Twitter.com"><img src="logo image/twitter.png" alt=""></a></li>
+                </ul>
+                <br>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Products</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="Shampoo.html">Shampoo</a></li>
+                    <li><a href="conditioner.html">Conditioner</a></li>
+                    <li><a href="Cream.html">Cream</a></li>
+                    <li><a href="Hair Mask.html">Hair Mask</a></li>
+                    <li><a href="Serum.html">Serum</a></li>
+                    <li><a href="spray.html">Spray</a></li>
+                </ul>
+              </center>
+              </div>
+              <div class="col-lg-3">
+                <center>
+                  <h4>Privacy</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Shipping Policy</a></li>
+                    <li><a href="">Return & Refund Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+              </center>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <footer class="py-5 footer-custom">
+    <div class="container">
+       <a href="Home.html"><p class="m-0 text-center text-light">© 2024 [HAIR CARE]</p></a>
+    </div>
+  </footer>
+
+  <script>
+    function showCard(cardId) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      if (card.id === cardId) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    darkModeToggle.addEventListener("click", function() {
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
+    });
+  });
+</script>
+
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+    
+        
+    
+
+    
+

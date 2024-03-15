@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+    padding-top: 56x; /* Adjusted for the fixed navbar height */
+    background-color:#ffffff;/* Black background color */
+    color: white#fff; /* White text color */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    }
+
+    nav {
+        box-shadow: 0 0 10px rgb(72, 64, 96);
+        background: rgb(72, 64, 96);
+    }
+
+    .icons{
+        margin: 20px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 10px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+    body {
+        padding-top:70px; /* Adjusted for the fixed navbar height in mobile view */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    }
+
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+  }
+
+  .light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .dark {
+    background-color: rgb(179, 168, 210);
+    color: #ffffff;
+  }
+
+    .dark-icon{
+      background: rgb(72, 64, 96);
+    }
+    
+    .dark-mode-toggle {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .dark-mode-toggle:hover {
+    color: #f8f9fa; /* slightly lighter shade on hover */
+  }
+
+  #back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(72, 64, 96);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.911);
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+      
+    .product-customs img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .btn {
+      background-color:  rgb(72, 64, 96);
+    }
+
+    .custom-cards {
+      background-color: #484060;
+      border-radius: 20px;
+      color: white;
+      display: flex;
+      margin-top: 90px;
+
+    }
+
+    .custom-cards img {
+      border-radius: 20px;
+      opacity: 0.8;
+    }
+
+    
+
+
+    .btn {
+      background-color:  rgb(72, 64, 96);
+      color: white;
+    }
+
+    .custom-cards {
+      background-color:  rgb(72, 64, 96);
+      border-radius: 20px;
+      color: white;
+    }
+
+    .custom-cards img {
+      height: 300px;
+      opacity: 0.8;
+    }
+
+    .category {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        }
+        .category:hover {
+        transform: scale(1.1);
+        }
+
+        .category img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+        .category a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        background: rgb(72, 64, 96);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+        .category:hover a {
+        opacity: 1;
+        }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+
+    .footer {
+            background-color:rgb(72, 64, 96);/* Footer background color */
+            color: #ecf0f1; /* Footer text color */
+            padding: 30px 0;
+
+        }
+
+        .footer a {
+            color: #ecf0f1; /* Footer link color */
+        }
+
+        .footer a:hover {
+            color: #ffffff; /* Footer link color on hover */
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 10px;
+        }
+
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .btn{
+            background-color:rgb(72, 64, 96);
+            color: white;
+        }
+
+        .footer-social li {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact-form {
+            margin-top: 20px;
+        }
+
+        .footer-custom{
+        background-color:rgb(72, 64, 96); /* Footer background color */
+        color: #ffffff; /* Footer text color */
+        padding: 30px 0;
+      }
+
+        ::-webkit-scrollbar{
+          width: 10px;
+        }
+
+
+        ::-webkit-scrollbar-thumb{
+        background-color:rgb(72, 64, 96);
+        width: 15px;
+        border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+  <button id="back-to-top" onclick="scrollToTop()"><img src="logo image/up-arrow.png" alt=""></button>
+
+  <header>
+    <div class="container-fluid w-100 clr">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <i class="fa-solid fa-h  fa-2xl" style="color: #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color: #ffffffe8; "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <img src="My Hair My Canvas img/hair (1).png" alt="">
+                <i class="fa-solid fa-c  fa-2xl" style="color:  #ffffffe8;"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  #ffffffe8; "></i>
+                <i class="fa-solid fa-e  fa-2xl" style="color:  #ffffffe8; "></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="Home.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Equipments.html">Equipments</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Products.html">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Category.html">Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Remedies.html">Remedies</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Sign up.html"><img src="My Hair My Canvas img/log-in.png" alt="Icon 1 "></a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                      <li class="nav-item">
+                        <a  class="nav-link" id="cart-icon"><img src="My Hair My Canvas img/shopping-cart (1).png" alt="Icon 2">
+                          <span class="badge bg-primary " id="cart-quantity"></span>
+                        </a>
+                        <!-- <a class="nav-link" href="Gallery.html">Gallery</a> -->
+                      </li>
+                    </ul>
+                    <button id="darkModeToggle" class="dark-mode-toggle">
+                      <img src="logo image/night.png" class="dark-icon" alt="">
+                    </button>
+                </div>
+               
+            </div>
+        </nav>
+    </header>
+
+        <section>
+          <div class="container-fluid p-0">
+            <img src="My Hair My Canvas img/banner.webp" style="width: 1920px;margin-top: 20px;" class="img-fluid" alt="Responsive image">
+          </div>
+        </section>
+<hr>
+        <section>
+          <div class="container">
+              <h2 class="mt-4 mb-3">Categories</h2>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="d-flex justify-content-between">
+                    <div class="category">
+                      <img src="logo image/shampoo.png" alt="Category 2">
+                      <a href="Shampoo.html"><h4>Shampoo</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-conditioner.png" alt="Category 1">
+                      <a href="conditioner.html"><h4>Conditioner</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-treatment.png" alt="Category 4">
+                      <a href="Hair Mask.html"><h4>Hair Mask</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/cream.png" alt="Category 3">
+                      <a href="Cream.html"><h4>Cream</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-care.png" alt="Category 5">
+                      <a href="Serum.html"><h4>Hair Serum</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/liquid-drop.png" alt="Category 6">
+                      <a href="Various oil.html"><h4>Hair Oils</h4></a>
+                    </div>
+                    <div class="category">
+                      <img src="logo image/hair-spray.png" alt="Category 7">
+                      <a href="spray.html"><h4>Spray</h4></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+    <center class="mt-3">
+      <a href="Products.html">
+        <i class="fa-solid fa-p  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+        <i class="fa-solid fa-r  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+        <i class="fa-solid fa-o  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+        <i class="fa-solid fa-d  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+        <i class="fa-solid fa-u  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+        <i class="fa-solid fa-c fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+        <i class="fa-solid fa-t  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+      </a>
+    </center>
+
+    <hr>
+      <!--shampoo-->
+        <section>
+          <div class="container mt-3">
+            <div class="row">
+                <center class="mt-3">
+                  <a href="Products.html">
+                    <i class="fa-solid fa-s  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+                    <i class="fa-solid fa-h  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+                    <i class="fa-solid fa-a  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                    <i class="fa-solid fa-m  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                    <i class="fa-solid fa-p  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+                    <i class="fa-solid fa-o fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                    <i class="fa-solid fa-o  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                  </a>
+                </center>
+                <!-- First Product Card -->
+                <div class="col-md-3 ">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/BondRepairShampoo.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">RESTRUCTURING BOND REPAIR</h5>
+                      <p class="card-text">$19.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Second Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/VolumeShampoo.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">MULTIPLYING VOLUME</h5>
+                      <p class="card-text">$08.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Third Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/REPLENISHING MOISTURE.jfif" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">REPLENISHING MOISTURE</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--forth product card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/ColourHoldShampoo.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">REPLENISHING MOISTURE</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>      
+
+                
+          
+        
+          <!-- First Modal -->
+        
+          <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h2>RESTRUCTURING BOND REPAIR</h2>
+                    <hr>
+                    <p>A color safe shampoo that gently cleanses the hair, removes daily build up and adds shine 
+                      with each use. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart" data-id="1">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Second Modal -->
+          <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>MULTIPLYING VOLUME</h2>
+                    <hr>
+                    <p>A gentle, daily, volumizing cleanser that boosts hair’s fullness and volume while 
+                      retaining moisture. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart" data-id="2">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Third Modal -->
+          <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>REPLENISHING MOISTURE</h2>
+                    <hr>
+                    <p>A luxurious cleanser that works to restore moisture while protecting hair from
+                      color fade, daily stresses and future damage. Perfect for straight, wavy, curly, 
+                      coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart" data-id="3">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- forth Modal -->
+          <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>REPLENISHING MOISTURE</h2>
+                    <hr>
+                    <p>A luxurious cleanser that works to restore moisture while protecting hair from
+                      color fade, daily stresses and future damage. Perfect for straight, wavy, curly, 
+                      coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart" data-id="4">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <!--conditioner-->
+        <section>
+          <div class="container mt-3">
+            <div class="row">
+              <center class="mt-3">
+              <a href="Products.html">
+                <i class="fa-solid fa-c  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-o  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-n  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-d  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-t fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-o  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-n fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-e  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+              </a>
+            </center>
+                <!-- First Product Card -->
+                <div class="col-md-3 ">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/volume conditioner.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">MULTIPLYING VOLUME CONDITIONER</h5>
+                      <p class="card-text">$19.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Second Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/CLINICAL DENSIFYING conditioner.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">CLINICAL DENSIFYING CONDITIONER</h5>
+                      <p class="card-text">$08.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Third Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/INFINITE COLOR HOLD conditioner.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">INFINITE COLOR HOLD <br>CONDITIONER</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--forth product card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/SMOOTHING ANTI-FRIZZ conditioner.jfif" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">SMOOTHING <br>ANTI-FRIZZ CONDITIONER</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>      
+
+                
+          
+        
+          <!-- First Modal -->
+        
+          <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h2>MULTIPLYING VOLUME CONDITIONER</h2>
+                    <hr>
+                    <p>A gentle, daily, volumizing conditioner that boosts hair’s fullness and volume while 
+                      retaining moisture. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Second Modal -->
+          <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>CLINICAL DENSIFYING CONDITIONER</h2>
+                    <hr>
+                    <p>A gentle self-foaming conditioner that infuses weightless, nourishing moisture to delicate, 
+                      thinning hair for healthy body and movement. 
+                      <br> 
+                      Perfect for fine hair.
+
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Third Modal -->
+          <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>INFINITE COLOR HOLD</h2>
+                    <hr>
+                    <p>A gentle conditioner that uses Dual-Capture Complex to minimize color-fade and replenish 
+                      moisture. Perfect for straight, wavy, curly, coiled and tightly coiled hair
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- forth Modal -->
+          <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>SMOOTHING ANTI-FRIZZ CONDITIONER</h2>
+                    <hr>
+                    <p>A frizz-controlling conditioner that nourishes, conditions and helps block humidity. 
+                      Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <!--hair mask-->
+        <section>
+          <div class="container mt-3">
+            <div class="row">
+              <center class="mt-3">
+              <a href="Products.html">
+                <i class="fa-solid fa-h  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-i  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-m fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-s  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-k fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+              </a>
+            </center>
+                <!-- First Product Card -->
+                <div class="col-md-3 ">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/more butter masque.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">MORE <br> BUTTER <br>MASQUE</h5>
+                      <p class="card-text">$19.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Second Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/RESTRUCTURING BOND REPAIR masque.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">RESTRUCTURING BOND REPAIR MASQUE</h5>
+                      <p class="card-text">$08.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Third Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/REPLENISHING MOISTURE MASQUE.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">REPLENISHING MOISTURE <br>MASQUE</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--forth product card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/cool hydration masque.webp " class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">COOL <br>HYDRATIONS <br>MASQUE</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>      
+
+                
+          
+        
+          <!-- First Modal -->
+        
+          <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h2>MORE BUTTER MASQUE</h2>
+                    <hr>
+                    <p>This intensive masque is formulated with Alterna's signature Caviar Extract and 
+                        Marine Healing Complex to help restore hair's natural moisture balance and improve 
+                        elasticity. It also contains Shea Butter, which helps to deeply nourish and hydrate 
+                        hair, leaving it feeling soft and smooth. The masque also helps to protect hair from 
+                        environmental damage and heat styling.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Second Modal -->
+          <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>RESTRUCTURING BOND REPAIR MASQUE</h2>
+                    <hr>
+                    <p>A deeply moisturizing reparative treatment masque that repairs damaged hair, mends 
+                        split ends, prevents breakage, and leaves hair healthier, shinier, softer, and less frizzy. 
+                        <br>
+                        Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Third Modal -->
+          <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>REPLENISHING MOISTURE MASQUE</h2>
+                    <hr>
+                    <p>An intensive moisturizing treatment that replenishes moisture-starved strands, 
+                        leaving hair smooth, silky and youthfully restored.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- forth Modal -->
+          <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>COOL HYDRATIONS MASQUE</h2>
+                    <hr>
+                    <p>A vegan moisturizing masque that provides deep hydration for replenished strands, 
+                        reduces breakage, frizz and static, and improves the overall look and feel of hair. 
+                        For most hair types
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!--cream-->
+        <section>
+          <div class="container mt-3">
+            <div class="row">
+              <center>
+              <a href="Products.html">
+                <i class="fa-solid fa-c  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+                <i class="fa-solid fa-r  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-e  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-a  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+                <i class="fa-solid fa-m  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+              </a>
+            </center>
+                <!-- First Product Card -->
+                <div class="col-md-3 ">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/SMOOTHING ANTI-FRIZZ cream.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">SMOOTHING <br> ANTI <br>FRIZZ</h5>
+                      <p class="card-text">$19.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Second Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/LEAVE-IN SMOOTHING CREAM.webp" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">LEAVE-IN  <br>SMOOTHING <br> GELÉE</h5>
+                      <p class="card-text">$08.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Third Product Card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/MULTI-STYLING AIR-DRY BALM.avif" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">MULTI-STYLING  <br>AIR-DRY <br> BALM</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--forth product card -->
+                <div class="col-md-3 mb-3">
+                  <div class="card custom-cards">
+                    <img src="My Hair My Canvas img/REPLENISHING MOISTURE cc.jpg" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                      <h5 class="card-title">REPLENISHING MOISTURE <br> CC CREAM</h5>
+                      <p class="card-text">$09.99</p>
+                      <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>      
+
+                
+          
+        
+          <!-- First Modal -->
+        
+          <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <h2>SMOOTHING ANTI-FRIZZ
+                      MULTI-STYLING AIR-DRY BALM</h2>
+                    <hr>
+                    <p>A texture-enhancing, air dry styling cream.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Second Modal -->
+          <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>LEAVE-IN SMOOTHING GELÉE</h2>
+                    <hr>
+                    <p>A lightweight, versatile gelée that is infused with oils and instantly 
+                      smoothes dry, unruly strands. Unlike traditional gels, this formula is 
+                      alcohol-free and infused with Caviar Extract and thirst-quenching marine 
+                      botanicals to deliver transformative, smoothing benefits with light conditioning, 
+                      definition and high shine.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Third Modal -->
+          <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>MULTI-STYLING AIR-DRY BALM</h2>
+                    <hr>
+                    <p>A luxurious cleanser that works to restore moisture while protecting hair from
+                      color fade, daily stresses and future damage. Perfect for straight, wavy, curly, 
+                      coiled and tightly coiled hair.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- forth Modal -->
+          <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>REPLENISHING MOISTURE CC CREAM</h2>
+                    <hr>
+                    <p>This “Complete Correction” leave-in treatment and styling cream delivers 
+                      10 benefits in 1 easy step for beautiful, healthy-looking styles. It can be 
+                      used alone as a quick fix or as a foundation for the layering of other styling 
+                      products.
+                      <hr>
+                     * US products and claims. Please check your local ingredient labels.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        </section>
+
+    <!--serum-->
+    <section>
+      <div class="container mt-3">
+        <div class="row">
+          <center class="mt-3">
+          <a href="Products.html">
+            <i class="fa-solid fa-s  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+            <i class="fa-solid fa-e  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-r  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-u  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-m  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+          </a>
+        </center>
+            <!-- First Product Card -->
+            <div class="col-md-3 ">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/INFINITE COLOR HOLD SERUM.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">INFINITE COLOR HOLD <br> SERUM</h5>
+                  <p class="card-text">$19.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Product Card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/RESTRUCTURING BOND REPAIR SERUM.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">RESTRUCTURING BOND REPAIR SERUM</h5>
+                  <p class="card-text">$08.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Product Card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/RESTRUCTURING BOND REPAIR  3in 1Serum.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">RESTRUCTURING BOND REPAIR 3-IN-1 <br> SEALING SERUMS</h5>
+                  <p class="card-text">$09.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!--forth product card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/SMOOTHING ANTI-FRIZZ conditioner.jfif" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">SMOOTHING <br>ANTI-FRIZZ CONDITIONER</h5>
+                  <p class="card-text">$09.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>      
+
+            
+      
+    
+      <!-- First Modal -->
+    
+      <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h2>INFINITE COLOR HOLD SERUM</h2>
+                <hr>
+                <p>A powerful dual-serum that provides color rejuvenation and shine. Perfect for straight, 
+                    wavy, curly, coiled and tightly coiled hair.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Second Modal -->
+      <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>RESTRUCTURING BOND REPAIR SERUM</h2>
+                <hr>
+                <p>This unique treatment absorbs quickly to provide a deep level of repair and moisture 
+                    overnight. Caviar Bond Enforcing Technology strengthens each strand and helps to 
+                    reconstruct damaged hair while you sleep.
+                  <br> 
+                  Perfect for fine hair.
+
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Third Modal -->
+      <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>RESTRUCTURING BOND REPAIR SERUM 3-IN-1 SEALING SERUM</h2>
+                <hr>
+                <p>A powerful, triple-action and triple-use concentrate. This 3-in-1 serum repairs, protects 
+                    and seals in one step that can be used at different points during the haircare routine.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- forth Modal -->
+      <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>SMOOTHING ANTI-FRIZZ CONDITIONER</h2>
+                <hr>
+                <p>A frizz-controlling conditioner that nourishes, conditions and helps block humidity. 
+                  Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+     <!--oil-->
+     <section>
+      <div class="container mt-3">
+        <div class="row">
+          <center class="mt-3">
+          <a href="Products.html">
+            <i class="fa-solid fa-v  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+            <i class="fa-solid fa-a  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-r  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-i  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-o  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+            <i class="fa-solid fa-u  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+            <i class="fa-solid fa-s  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+            <br>
+            <br>
+            <i class="fa-solid fa-o  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-i  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-l  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+          </a>
+        </center>
+            <!-- First Product Card -->
+            <div class="col-md-3 ">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/apricot hair oil.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">Handcraft Apricot <br> Kernel Oil - 100% Pure <br> And Natural</h5>
+                  <p class="card-text">$19.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Product Card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/Avocado hair oil.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">Handcraft Avocado Oil - 100% Pure and Natural - Hair Oil</h5>
+                  <p class="card-text">$08.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Product Card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/Sunflower hair oil.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">Handcraft Sunflower Oil – 100% Pure and Natural</h5>
+                  <p class="card-text">$09.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!--forth product card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/coconut hair oil.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">Handcraft Fractionated Coconut Oil - 100% Pure and Natural</h5>
+                  <p class="card-text">$09.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>      
+
+            
+      
+    
+      <!-- First Modal -->
+    
+      <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h2>Handcraft Apricot Kernel Oil - 100% Pure And Natural</h2>
+                <hr>
+                <p>The Snigdha (oily) property of Apricot Kernel Oil reduces excess dryness 
+                  of scalp and promotes hair growth and strength so as to maintain healthy 
+                  hair and prevent hair fall. It is a wonderful natural hair conditioner 
+                  when applied to the strands of hair.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Second Modal -->
+      <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>Handcraft Avocado Oil - 100% Pure and Natural - Hair Oil</h2>
+                <hr>
+                <p>100% PURE & NATURAL AVOCADO OIL unfiltered, undiluted without any additives or 
+                  fillers. Rich in vitamins and fatty acids it is truly a wonder carrier oil. 
+                  Avocado Oil can be used for skin care, aromatherapy, hair, natural lubricant, 
+                  moisturizer, and much more.
+                  <br> 
+                  Perfect for fine hair.
+
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Third Modal -->
+      <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>Handcraft Sunflower Oil – 100% Pure and Natural</h2>
+                <hr>
+                <p>100% PURE & NATURAL SUNFLOWER OIL unfiltered, undiluted without any 
+                  additives or fillers. Rich in vitamins, fatty acids and antioxidants, 
+                  it is truly a wonder carrier oil. From skin care to hair care and way 
+                  beyond, this amazing oil has endless uses
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- forth Modal -->
+      <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>Handcraft Fractionated Coconut Oil - 100% Pure and Natural</h2>
+                <hr>
+                <p>100% PURE & NATURAL FRACTIONATED COCONUT OIL is one of the most versatile carrier 
+                  oils and has endless uses. It is most commonly used for aromatherapy, essential oils, 
+                  massage, for dogs and other pets, and as a hair & skin moisturizer. Our premium quality 
+                  coconut oil Fragrance Free, Hexane Free, Preservative Free, Chemical Free, and 100% Vegan.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!--spray-->
+    <section>
+      <div class="container mt-3">
+        <div class="row">
+          <center class="mt-3">
+          <a href="Products.html">
+            <i class="fa-solid fa-s  fa-2xl" style="color: rgb(72, 64, 96);"></i>
+            <i class="fa-solid fa-p  fa-2xl" style="color: rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-r  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-a  fa-2xl" style="color:  rgb(72, 64, 96); "></i>
+            <i class="fa-solid fa-y  fa-2xl" style="color:  rgb(72, 64, 96);"></i>
+          </a>
+        </center>
+            <!-- First Product Card -->
+            <div class="col-md-3 ">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/PROFESSIONAL STYLING SPRAY.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">PROFESSIONAL STYLING<br>SPRAY</h5>
+                  <p class="card-text">$19.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product1Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Product Card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/PERFECT IRON SPRAY.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">PERFECT <br> IRON <br>  SPRAY</h5>
+                  <p class="card-text">$08.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product2Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Third Product Card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/TEXTURE SPRAY.webp" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">PERFECT <br> TEXTURE <br> SPRAY </h5>
+                  <p class="card-text">$09.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product3Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <!--forth product card -->
+            <div class="col-md-3 mb-3">
+              <div class="card custom-cards">
+                <img src="My Hair My Canvas img/HIGH HOLD FINISHING SPRAY.jpg" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">HIGH HOLD <br> FINISHING <br> SPRAY</h5>
+                  <p class="card-text">$09.99</p>
+                  <a href="#" class="btn btn-light" data-toggle="modal" data-target="#product4Modal">View Details</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>      
+
+            
+      
+    
+      <!-- First Modal -->
+    
+      <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="product1ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product1ModalLabel">Product 1 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h2>PROFESSIONAL STYLING SPRAY</h2>
+                <hr>
+                <p>A high shine finishing spray. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Second Modal -->
+      <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="product2ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product2ModalLabel">Product 2 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>PERFECT IRON SPRAY</h2>
+                <hr>
+                <p>A heat protection spray. Perfect for straight, wavy, curly, coiled and tightly coiled hair.
+                  <br> 
+                  Perfect for fine hair.
+
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Third Modal -->
+      <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>PERFECT TEXTURE SPRAY</h2>
+                <hr>
+                <p>A non-flaky texturizer that provides lightweight hold, adds body and volume to the hair and creates 42% more volume.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- forth Modal -->
+      <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="product3ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="product3ModalLabel">Product 3 Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2>HIGH HOLD FINISHING SPRAY</h2>
+                <hr>
+                <p>A quick drying hold spray that seals styles with matte shine and long-lasting humidity resistance without stickiness or flaking.
+                  <hr>
+                 * US products and claims. Please check your local ingredient labels.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <footer class="footer w-100 ">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Quick Links</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                      <li><a href="home.html">Home</a></li>
+                      <li><a href="Equipments.html">Equipments</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                      <li><a href="Remedies.html">Remedies</a></li>
+                      <li><a href="Gallery.html">Gallery</a></li>
+                      <li><a href="Contact.html">Contact Us</a></li>
+                      <li><a href="Category.html">Category</a></li>
+                  </ul>
+                </center>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h4>Subscribe</h4> 
+                <hr>
+                <div class="subscribe-container">
+                  <input type="email" placeholder="Enter your email"  class="form-control">
+                  <input type="hidden" name="_captcha" value="false">
+                  <button type="submit" class=" btn btn-light mt-2">subscribe now</button>
+                </div>
+                <br>                
+                  <h4>Follow Us</h4>
+                  <ul class="footer-social">
+                    <li><a href="https://www.google.com.pk"><img src="logo image/google.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com"><img src="logo image/instagram.png" alt=""></a></li>
+                    <li><a href="https://www.pinterest.com"><img src="logo image/pinterest.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com"><img src="logo image/facebook.png" alt=""></a></li>
+                    <li><a href="https://www.Twitter.com"><img src="logo image/twitter.png" alt=""></a></li>
+                </ul>
+                <br>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <center>
+                  <h4>Products</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="Shampoo.html">Shampoo</a></li>
+                    <li><a href="conditioner.html">Conditioner</a></li>
+                    <li><a href="Cream.html">Cream</a></li>
+                    <li><a href="Hair Mask.html">Hair Mask</a></li>
+                    <li><a href="Serum.html">Serum</a></li>
+                    <li><a href="spray.html">Spray</a></li>
+                </ul>
+              </center>
+              </div>
+              <div class="col-lg-3">
+                <center>
+                  <h4>Privacy</h4>
+                  <hr>
+                  <ul class="footer-menu">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Shipping Policy</a></li>
+                    <li><a href="">Return & Refund Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+              </center>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <footer class="py-5 footer-custom">
+    <div class="container">
+       <a href="Home.html"><p class="m-0 text-center text-light">© 2024 [HAIR CARE]</p></a>
+    </div>
+</footer>
+
+  <script>
+    document.querySelectorAll('.add-to-cart').forEach(b =>{
+        b.addEventListener('click' , addToCart);
+    });
+
+
+
+    function addToCart(event){
+        event.preventDefault();
+        const productId = event.target.dataset.id;
+
+
+        let cart = JSON.parse(localStorage.getItem('cart'))|| {};
+
+
+
+        cart[productId] = (cart[productId]|| 0) + 1;
+
+
+        updatecartQuantity(cart);
+
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+
+    function updatecartQuantity(cart){
+        const cartQuantity = Object.values(cart).reduce((acc,val)=>acc+ val,0);
+        document.getElementById('cart-quantity').textContent = cartQuantity;
+    }
+
+    document.getElementById('cart-icon').addEventListener('click' , showcart);
+    function showcart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || {};
+      const cartModalBody = document.getElementById('cart-modal-body');
+  
+      // Clear previous modal content
+      cartModalBody.innerHTML = '';
+  
+      // Loop through each item in the cart and generate HTML
+      for (const productId in cart) {
+          const quantity = cart[productId];
+          const productHTML = `
+              <div class="row border-bottom py-2">
+                  <div class="col-2">
+                      <img src="My Hair My Canvas img/BondRepairShampoo.webp" height="50px" alt="product image">
+                  </div>
+                  <div class="col-6">
+                      <h5 class="card-title">RESTRUCTURING BOND REPAIR</h5>
+                      <p class="card-text">$19.99</p>
+                      <p>Quantity: ${quantity}</p>
+                  </div>
+                  <div class="col-4 align-self-center">
+                      <button class="btn btn-danger delete-from-cart" data-id="${productId}">Delete</button>
+                  </div>
+              </div>`;
+          cartModalBody.innerHTML += productHTML;
+      }
+  
+      // Attach event listeners to delete buttons
+      cartModalBody.querySelectorAll('.delete-from-cart').forEach(btn => {
+          btn.addEventListener('click', removeFromCart);
+      });
+  
+      // Show the modal
+      const myModal = new bootstrap.Modal(document.getElementById('cart-modal'));
+      myModal.show();
+  }
+
+    const initCart = JSON.parse(localStorage.getItem('cart'))||{};
+    updatecartQuantity(initCart);
+     
+</script>
+
+<script>
+  // Add event listener to delete buttons
+  document.querySelectorAll('.delete-from-cart').forEach(btn => {
+      btn.addEventListener('click', removeFromCart);
+  });
+
+  function removeFromCart(event) {
+      const productId = event.target.dataset.id;
+      let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+      // Remove the product from the cart
+      delete cart[productId];
+
+      // Update the cart quantity and display
+      updatecartQuantity(cart);
+
+      // Update the localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Update the modal display
+      showcart();
+  }
+</script>
+
+
+
+<div class="modal fade" id="cart-modal" >
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cart-modal-label">Your Card</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="cart-modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    darkModeToggle.addEventListener("click", function() {
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
+    });
+  });
+</script>
+
+<script>
+  // Function to scroll to the top of the page
+  function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Smooth scrolling behavior
+      });
+  }
+  
+  // Show/hide back to top button based on scroll position
+  window.onscroll = function() {
+      var button = document.getElementById('back-to-top');
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          button.style.display = "block";
+      } else {
+          button.style.display = "none";
+      }
+  };
+</script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+        
+</body>
+</html>
